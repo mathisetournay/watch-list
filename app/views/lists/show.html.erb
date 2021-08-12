@@ -1,6 +1,19 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-    <h1><%= @list.name %></h1>
-  <div>
+  <h2><%= @list.name %></h2>
+  <ul>
+    <% @list.bookmarks.each do |bookmark| %>
+      <li>
+        <%= link_to bookmark.comment, bookmark_path(bookmark) %>
+        <div class="btn">
+        <%= link_to '🗑️', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are u sure ?' } %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <h3>Ajoute un bookmark</h3>
+  <%= render 'bookmarks/form_bookmark', bookmark: @bookmark %>
+  <%= link_to 'Retour', lists_path %>
+
+
+
 </div>
