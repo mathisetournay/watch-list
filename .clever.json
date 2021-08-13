@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "app_id": "app_1f7361af-d58b-4b39-859e-4c40569864f6",
+      "org_id": "user_c349f27e-9e14-4d5b-84bb-4ea40adc9f6e",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_1f7361af-d58b-4b39-859e-4c40569864f6.git",
+      "name": "WATCH_LIST",
+      "alias": "WATCH_LIST"
+    }
+  ]
+}
+
+{
+  "deploy": {
+    "rakegoals": [
+      "assets:precompile",
+      "db:migrate"
+    ]
+  }
+}
