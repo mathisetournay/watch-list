@@ -1,12 +1,19 @@
 <div class="movie-container">
-  <h2><%= @list.name %></h2>
+
+  <h2>
+     <%= @list.name %>
+  </h2>
+
   <div class="movies">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="carte">
-        <img src="<%= bookmark.movie.poster_url %>" >
-        <%= bookmark.movie.title %>
-        <br>
-        <%= bookmark.movie.overview %>
+          <div class="card-img">
+            <img src="<%= bookmark.movie.poster_url %>" >
+          </div>
+          <div class="card-content">
+            <%= bookmark.movie.title %>
+            <%= bookmark.movie.overview %>
+          </div>
         <div class="btn">
           <%= link_to '🗑️', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are u sure ?' } %>
         </div>

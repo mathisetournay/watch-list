@@ -5,13 +5,15 @@
 .movies {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
-
-
+  margin-top: 20px;
+  padding-top: 20px;
 }
-.movie-container {
-  margin: auto 50px;
 
+
+.movie-container {
+  padding: auto 30px;
+  padding-top: 30px;
+  background-color: #F9F9F9;
 }
 
 @media (max-width: 1000px) {
@@ -25,4 +27,16 @@
   .movies {
     grid-template-columns: 1fr;
   }
+}
+
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+
+  text-align: center;
+  border-bottom: 1px solid #243E53;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-bottom: 30px;
 }
