@@ -1,0 +1,28 @@
+.add-bookmark {
+  margin-top: 100px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+
+}
+.movie-container {
+  margin: auto 50px;
+
+}
+
+@media (max-width: 1000px) {
+  .movies {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+
+@media (max-width: 700px) {
+  .movies {
+    grid-template-columns: 1fr;
+  }
+}

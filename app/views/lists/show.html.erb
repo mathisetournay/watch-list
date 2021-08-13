@@ -1,22 +1,24 @@
-<div class="container">
+<div class="movie-container">
   <h2><%= @list.name %></h2>
-  <ul>
-    <div>
-      <% @list.bookmarks.each do |bookmark| %>
-        <div class="card" style="width: 15rem;">
-          <img src="<%= bookmark.movie.poster_url %>" >
-          <%= bookmark.movie.title %>
-          <br>
-          <%= bookmark.movie.overview %>
-          <div class="btn">
+  <div class="movies">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="carte">
+        <img src="<%= bookmark.movie.poster_url %>" >
+        <%= bookmark.movie.title %>
+        <br>
+        <%= bookmark.movie.overview %>
+        <div class="btn">
           <%= link_to '🗑️', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are u sure ?' } %>
         </div>
+      </div>
     <% end %>
-  </ul>
-  <h3>Ajoute un bookmark</h3>
-  <%= render 'bookmarks/form_bookmark', bookmark: @bookmark %>
-  <%= link_to 'Retour', lists_path %>
+  </div>
 
+  <div class="add-bookmark">
+    <h3>Ajoute un bookmark</h3>
+    <%= render 'bookmarks/form_bookmark', bookmark: @bookmark %>
+    <%= link_to 'Retour', lists_path %>
+  </div>
 
 
 </div>
